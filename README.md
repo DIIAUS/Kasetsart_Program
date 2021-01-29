@@ -1,15 +1,16 @@
-#*Hello Welcome to My GitHub Profile.* :relaxed: 
-###My name is Nathan Butta 
-###I Study At KASETSART UNIVERSITY  
-###I'm 21 years old 
+# *Hello Welcome to My GitHub Profile.* :relaxed: 
+### My name is Nathan Butta 
+### I Study At KASETSART UNIVERSITY  
+### I'm 21 years old. 
 
-##Programming language i can write
--Python
--C
--C++
--Java
+## Programming language i can write.
+-Python.
+-C.
+-C++.
+-Java.
 
-*I’m currently learning JAVA* 
+#### Facebook : [Facebook](https://web.facebook.com/Joekuay/).
+#### IG : [IG](https://www.instagram.com/?hl=en).
 
 
 <!--
