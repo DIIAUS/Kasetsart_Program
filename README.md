@@ -2,7 +2,7 @@
 ## i ' m 21 years old  
 
 I’m currently learning JAVA 
-![Nathan](https://blogsmedia.lse.ac.uk/blogs.dir/9/files/2019/07/code.jpg)
+![Nathan](C:\Users\NathanB\Downloads/a1.png)
 <!--
 **DIIAUS/DIIAUS** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
