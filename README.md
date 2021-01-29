@@ -2,7 +2,7 @@
 ## Welcome to my Github Profile 
 ### i'm 21 years old  
 
-I’m currently learning JAVA 
+*I’m currently learning JAVA* 
 ![Nathan]()
 <!--
 **DIIAUS/DIIAUS** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
