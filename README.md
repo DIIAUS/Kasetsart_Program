@@ -1,6 +1,7 @@
 ### Hi there 👋
 
 I’m currently learning JAVA 
+![Nathan](https://blogsmedia.lse.ac.uk/blogs.dir/9/files/2019/07/code.jpg)
 <!--
 **DIIAUS/DIIAUS** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
