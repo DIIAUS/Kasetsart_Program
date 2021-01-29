@@ -3,14 +3,14 @@
 ### I Study At KASETSART UNIVERSITY  
 ### I'm 21 years old. 
 
-## Programming language i can write.
--Python.
--C.
--C++.
--Java.
+> ## Programming language i can write.
+> -**Python.
+> -C.
+> -C++.
+> -Java**.
 
-#### Facebook : [Facebook](https://web.facebook.com/Joekuay/).
-#### IG : [IG](https://www.instagram.com/?hl=en).
+#### Facebook : [Joe Bt](https://web.facebook.com/Joekuay/).
+#### Instagram : [Dia_JK](https://www.instagram.com/dia_jk/?hl=en).
 
 
 <!--
