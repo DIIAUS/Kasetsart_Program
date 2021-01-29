@@ -1,9 +1,9 @@
 # Hi My name is Nathan_Butta :relaxed:
 ## Welcome to my Github Profile 
-## i ' m 21 years old  
+### i'm 21 years old  
 
 I’m currently learning JAVA 
-![Nathan](C:\Users\NathanB\Downloads/a1.png)
+![Nathan]()
 <!--
 **DIIAUS/DIIAUS** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
