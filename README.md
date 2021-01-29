@@ -4,10 +4,10 @@
 ### I'm 21 years old. 
 
 > ## Programming language i can write.
-> -**Python.
+> -Python.
 > -C.
 > -C++.
-> -Java**.
+> -Java.
 
 #### Facebook : [Joe Bt](https://web.facebook.com/Joekuay/).
 #### Instagram : [Dia_JK](https://www.instagram.com/dia_jk/?hl=en).
