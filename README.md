@@ -1,4 +1,5 @@
-# Hi My name is N a t h a n __B u t t a Welcome to my Github Profile 
+# Hi My name is Nathan_Butta :relaxed:
+## Welcome to my Github Profile 
 ## i ' m 21 years old  
 
 I’m currently learning JAVA 
