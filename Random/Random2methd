@@ -3,7 +3,7 @@
 import java.util.Random;
 import java.util.logging.Logger;
 
-public class Main {
+public class Random2methd {
     
     public static double randoms1() {
         double rangeMin = 0.0f;
