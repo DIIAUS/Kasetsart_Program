@@ -4,5 +4,6 @@
 > - **File OS.Zip**
 > - **RaspberryPi** (RpZeroW , Rp1 , Rp2 , Rp3 , Rp4)
 
-## วิธีติดตั้ง 
-> - 
+## ขั้นตอนที่ 1 
+> 1. ดาวน์โหลดไฟล์ RaspberryPi_OwnOS.zip
+
