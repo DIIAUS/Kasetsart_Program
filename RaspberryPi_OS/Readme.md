@@ -9,4 +9,5 @@
 > 1. ดาวน์โหลดไฟล์ RaspberryPi_OwnOs.zip
 > 2. แตกไฟล์ RaspberryPi_OwnOs.zip จะได้โฟล์เดอร์ชื่อว่า --> "**circle-master**" 
 > 3. เปิด **circle-master** แล้วเปิดไฟล์ ***Rules.mk***
-> 4. หาคำว่า ***RASPPI	?= 1*** แล้วทำการเปลี่ยนหมายเลข RaspberryPi ที่ต้องการ เช่น Pi4 --> ***RASPPI	?= 4***
+> 4. หาคำว่า ***RASPPI	?= 1*** แล้วทำการเปลี่ยนหมายเลข RaspberryPi ที่ต้องการ **เช่น Pi4 --> RASPPI	?= 4***
+> 5. 
