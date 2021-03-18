@@ -1,207 +1,137 @@
-import java.util.ArrayList;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
 
-class Customer
+class TextBut extends JFrame
 {
-  private String id;
-  private String firstName;
-  private String lastName;
-  
-  public Customer(String id, String firstName, String lastName)
-  {
-    this.id = id;
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
-  public String getId()
-  {
-    return this.id;
-  }
-  public String getFirstName()
-  {
-    return this.firstName;
-  }
-  public String getLastName()
-  {
-    return  this.lastName;
-  }
+private JTextField textField1;
+public TextBut(){
+    Container c = getContentPane();
+    c.setLayout( new FlowLayout());
+    Font font1 = new Font("Courier New", Font.BOLD, 20);
+    JLabel label1 = new JLabel();
+    textField1 = new JTextField(25);
+    textField1.setFont(font1);
+    c.add(label1);
+    c.add(textField1);
+    textField1.addActionListener(  new ActionListener(){
+        public void actionPerformed(ActionEvent c){
+          JOptionPane.showMessageDialog(null,textField1.getText());}
+        }
+      );
+      JButton btn1 = new JButton("Clear");
+      c.add(btn1);
+      btn1.addActionListener(  new ActionListener()
+        {
+            public void actionPerformed(ActionEvent x)
+            {
+              textField1.setText(" ");
+            }
+        });
+      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      setSize(480,360);
+      setVisible(true);
+      }
 }
-class Invoice
-{
-  private String id;
-  private Customer customer;
-  private ArrayList<LineItem> items = new ArrayList<LineItem>();
-  
-  public Invoice(String id, Customer customer)
-  {
-    this.id = id;
-    this.customer = customer;
-  }
-  //add LineItem to ArrayList items
-  public void addItem(Product product, int quantity)
-  {
-    LineItem cos = new LineItem(product,quantity);
-    items.add(cos);
-  }
-  public String getId()
-  {
-    return this.id;
-  }
-  public Customer getCustomer()
-  {
-    return this.customer;
-  }
-  public LineItem getLineItem(int i)
-  {
-    return items.get(i);
-  }
-  //get price of product form LineItem in ArrayList and plus sum
-  public double getTotalPrice()
-  {
-    double sum = 0.0;
 
-    for(int j=0;j<items.size();j++)
-    {
-      sum +=(items.get(j)).getTotalPrice();
-    }
-    return sum;
-  }
-  //print customer name and all of older
-  public void print()
-  {
-    double total = 0;
-    System.out.println("INVOICE: #<"+this.id+">");
-    //getCustomer name from method getCustomer.get(First/Last)Name
-    System.out.println("CUSTOMER: <"+getCustomer().getFirstName()+ " " +getCustomer().getLastName()+">");
-    for(int i=0;i < items.size();i++)
-    {
-      //getName of product from method getLineItem().getProduct.getName()
-      String namepro = getLineItem(i).getProduct().getName();
-      //getQuantity of product from method getLineItem().getQuantity()
-      int quanpro = getLineItem(i).getQuantity();
-      //getPrice of product from method getLineItem().getProduct.getPrice()
-      System.out.printf("%d <%s> x <%d> = <%.2f>\n",i+1,namepro,quanpro,getLineItem(i).getProduct().getPrice());
-    }
-    //TotalPrice of  product in ArrayList items by getTotalPrice() apiece of product and sum total
-    for(int j=0;j < items.size();j++ )
-    {
-      total += getLineItem(j).getTotalPrice();
-    }
-    System.out.printf("TOTAL: <%.2f>\n",total);
-  }
+class Swap extends JFrame
+{
+  private JTextField textField1;
+  private JTextField textField2;
+  private int swapbox = 0;
+  private int modifybox = 0;
+  public Swap()
+      {
+      Container c = getContentPane();
+      c.setLayout( new FlowLayout());
+      JPanel panel3 = new JPanel();
+      panel3.setLayout( new BoxLayout(panel3, BoxLayout.Y_AXIS));
+      JCheckBox check1 = new JCheckBox("Swap");
+      JCheckBox check2 = new JCheckBox("Modify on Swap");
+      panel3.add(check1);
+      panel3.add(check2);
+      JPanel panel1 = new JPanel();
+      panel1.setLayout( new BoxLayout(panel1,BoxLayout.Y_AXIS));
+      Font font1 = new Font("Courier New", Font.BOLD, 20);
+      JLabel label1 = new JLabel();
+      textField1 = new JTextField(25);
+      textField1.setFont(font1);
+      panel1.add(label1);
+      panel1.add(textField1);
+      textField2 = new JTextField(25);
+      textField2.setFont(font1);
+      panel1.add(textField2);
+      JPanel panel2 = new JPanel();
+      panel2.setLayout( new BoxLayout(panel2,BoxLayout.Y_AXIS));
+      JButton btn1 = new JButton("Clear");
+      JButton btn2 = new JButton("Submit");
+      panel2.add(btn2);
+      panel2.add(btn1);
+      String word = textField1.getText();
+      panel1.setLayout( new BoxLayout(panel1,BoxLayout.Y_AXIS));
+      JLabel label4 = new JLabel(word);
+      panel1.add(label4);
+      c.add(panel3, BorderLayout.WEST);
+      c.add(panel1, BorderLayout.CENTER);
+      c.add(panel2, BorderLayout.EAST);
+      btn1.addActionListener(  new ActionListener()
+        {
+            public void actionPerformed(ActionEvent x)
+            {
+              textField1.setText(" ");
+              textField2.setText(" ");
+              label4.setText(" ");
+            }
+        });
+      btn2.addActionListener(  new ActionListener()
+        {
+            public void actionPerformed(ActionEvent c)
+            {
+              if (swapbox == 1 && modifybox == 0) {
+                label4.setText(textField2.getText()+textField1.getText());
+            }
+              if (swapbox == 0 && modifybox == 0) {
+                label4.setText(textField1.getText()+textField2.getText());
+            }
+              if (swapbox == 1 && modifybox == 1) {
+                String a = textField1.getText();
+                textField1.setText(textField2.getText());
+                textField2.setText(a);
+                label4.setText(textField1.getText()+textField2.getText());
+            }
+          }
+        });
+      check1.addItemListener(new ItemListener(){
+        public void itemStateChanged(ItemEvent z){
+          if(z.getStateChange() == z.SELECTED){
+            swapbox = 1;
+          }
+          else {
+            swapbox = 0;
+          }
+        }
+      });
+      check2.addItemListener(new ItemListener(){
+      public void itemStateChanged(ItemEvent z){
+        if(z.getStateChange() == z.SELECTED){
+          modifybox = 1;
+          if (swapbox == 1) {
+          }
+        }
+        else {
+          modifybox = 0;
+        }
+      }
+    });
+      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      setSize(800,300);
+      setVisible(true);
+      }
 }
-class InvoiceTest
-{
-  public static void main(String[] args)
-  {
-    //Product
-    Product pro1 = new Product("1","Old Blue Box01",10);
-    Product pro2 = new Product("2","Old Blue Box02",20);
-    Product pro3 = new Product("3","Old Blue Box03",30);
-    Product pro4 = new Product("4","Old Blue Box04",40);
-    Product pro5 = new Product("5","Old Blue Box05",50);
-    Product pro6 = new Product("6","Table",2500);
-    Product pro7 = new Product("7","Chair",400);
-    Product pro8 = new Product("8","Bed",7900);
-    Product pro9 = new Product("9","Fan",790);
-    Product pro10 = new Product("10","Pillow",690);
-    Product pro11 = new Product("11","lamborghini veneno",20000000);
 
-    //Invoice#1
-    Customer cus1 = new Customer("1","John","Smith");
-    Invoice inv1 = new Invoice("1",cus1);
-    inv1.addItem(pro1,5);
-    inv1.addItem(pro2,5);
-    inv1.addItem(pro3,5);
-    inv1.addItem(pro4,5);
-    inv1.addItem(pro5,5);
-    inv1.print();
-    System.out.println();
-
-    //Invoice#2
-    Customer cus2 = new Customer("2","kwanchai","Limpapanasitti");
-    Invoice inv2 = new Invoice("2",cus2);
-    inv2.addItem(pro6,1);
-    inv2.addItem(pro7,2);
-    inv2.addItem(pro8,1);
-    inv2.addItem(pro9,1);
-    inv2.addItem(pro10,2);
-    inv2.print();
-    System.out.println();
-
-    //Invoice#3
-    Invoice inv3 = new Invoice("3",cus2);
-    inv3.addItem(pro11,1);
-    inv3.addItem(pro7,2);
-    inv3.addItem(pro6,1);
-    inv3.addItem(pro2,1);
-    inv3.addItem(pro10,2);
-    inv3.print();
-    System.out.println();
-
-
-  }
-}
-class LineItem
-{
-  private Product item;
-  private int quantity;
-  
-  //input product and quantity to LineItem
-  public LineItem(Product product, int quantity)
-  {
-    this.item = product;
-    this.quantity = quantity;
-
-  }
-  public Product getProduct()
-  {
-    return this.item;
-  }
-  public int getQuantity()
-  {
-    return  this.quantity;
-  }
-  //getPrice product from item and mutiple with quantity
-  public double getTotalPrice()
-  {
-    return this.item.getPrice()*this.quantity;
-  }
-}
-class Product
-{
-  private String id;
-  private String name;
-  private double price;
-  
-  public Product(String id, String name, double price)
-  {
-    if(price < 0)
-    {
-      this.price = 0.0;
-    }
-    this.id = id;
-    this.name = name;
-    this.price = price;
-
-  }
-  public String getId()
-  {
-    return this.id;
-  }
-  public String getName()
-  {
-    return this.name;
-  }
-  public void setPrice(double price)
-  {
-    if(price < 0)
-    {
-      this.price = 0.0;
-    }
-    this.price = price;
-  }
-  public double getPrice()
-  {
-    return this.price;
-  }
+public class Main {
+   public static void main(String[] args) {
+      new TextBut();
+      new Swap();
+   }
 }
