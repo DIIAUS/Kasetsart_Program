@@ -9,7 +9,7 @@
 > - C++.
 > - Java.
 
-[![](https://icons-for-free.com/iconfiles/png/512/facebook+logo+logo+website+icon-1320190502625926346.png "facebook")](https://web.facebook.com/Joekuay/)
+[<span id="jodit-selection_marker_1622790601264_7616311441191661" data-jodit-selection_marker="start" style="line-height: 0; display: none;"></span>![](https://icons-for-free.com/iconfiles/png/512/facebook+logo+logo+website+icon-1320190502625926346.png "facebook")<span id="jodit-selection_marker_1622790601265_2188898330617819" data-jodit-selection_marker="end" style="line-height: 0; display: none;"></span>](https://web.facebook.com/Joekuay/)
 #### Instagram : [Dia_JK](https://www.instagram.com/dia_jk/?hl=en).
 
 
